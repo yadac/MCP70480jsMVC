@@ -1,0 +1,22 @@
+﻿<section>
+    <div id="divMain">
+        <h1>here is a test page.</h1>
+        <p>Programming in HTML5 with JavaScript and CSS3 (MCSD): Programming in HTML5 with JavaScript and CSS3</p>
+    </div>
+    <form action="/" method="post">
+        <label>last name:</label><input type="text" required="" id="last" />
+        <label>first name:</label><input type="text" required="" id="first" />
+        <button id="save" onclick="saveInfo();">save</button>
+    </form>
+    <span id="uinfos">xxxxxxxx</span>
+</section>
+
+<script>
+    function saveInfo() {
+        var last = document.getElementById("last").value;
+        $('#uinfos').text(last);
+        this.event.preventDefault();
+
+        // ajax scenario
+    }
+</script>s
