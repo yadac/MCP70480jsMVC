@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace MCP70480jsMVC.Controllers
 {
@@ -10,6 +6,7 @@ namespace MCP70480jsMVC.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.Message = "Home Action Method.";
             return View();
         }
 
@@ -30,6 +27,13 @@ namespace MCP70480jsMVC.Controllers
         public ActionResult Test()
         {
             return View();
+        }
+
+        [ChildActionOnly]
+        public ActionResult PlayVideo()
+        {
+            ViewBag.Message = "Playing Intro Video";
+            return View("Index");
         }
     }
 }
