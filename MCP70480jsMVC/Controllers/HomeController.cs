@@ -24,6 +24,7 @@ namespace MCP70480jsMVC.Controllers
             return View();
         }
 
+        [Authorize]
         public ActionResult Test()
         {
             return View();
