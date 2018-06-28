@@ -30,6 +30,13 @@ namespace MCP70480jsMVC.Controllers
             return View();
         }
 
+        public ActionResult TestAction()
+        {
+            // return instance of custum action class.
+            // it needs to inherit ActionResult class, also it needs to override the ExecuteResult method.
+            return new Extensions.TestResult();
+        }
+
         [ChildActionOnly]
         public ActionResult PlayVideo()
         {
