@@ -24,12 +24,13 @@ namespace MCP70480jsMVC.Controllers
             return View();
         }
 
-        [Authorize]
+        [AllowAnonymous]
         public ActionResult Test()
         {
             return View();
         }
 
+        [Authorize]
         public ActionResult TestAction()
         {
             // return instance of custum action class.

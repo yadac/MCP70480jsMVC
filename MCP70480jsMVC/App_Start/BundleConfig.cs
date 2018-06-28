@@ -1,5 +1,4 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
 namespace MCP70480jsMVC
 {
@@ -13,6 +12,10 @@ namespace MCP70480jsMVC
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
+
+            // add original js
+            bundles.Add(new ScriptBundle("~/bundles/ysk").Include(
+                        "~/Scripts/ysk-{version}-common.js"));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at https://modernizr.com to pick only the tests you need.
