@@ -1,4 +1,6 @@
-﻿using System.Web.Mvc;
+﻿using System.Security.Claims;
+using System.Threading;
+using System.Web.Mvc;
 
 namespace MCP70480jsMVC.Controllers
 {
@@ -33,6 +35,12 @@ namespace MCP70480jsMVC.Controllers
         [Authorize]
         public ActionResult TestAction()
         {
+            ClaimsPrincipal principal = (ClaimsPrincipal)Thread.CurrentPrincipal;
+            bool authorized = principal.HasClaim("xxx", "aaa");
+            if (authorized)
+            {
+                ViewBag.CitizenId = "xxx";
+            }
             // return instance of custum action class.
             // it needs to inherit ActionResult class, also it needs to override the ExecuteResult method.
             return new Extensions.TestResult();
