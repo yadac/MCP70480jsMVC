@@ -1,4 +1,5 @@
-﻿using System.Security.Claims;
+﻿using System;
+using System.Security.Claims;
 using System.Threading;
 using System.Web.Mvc;
 
@@ -29,6 +30,8 @@ namespace MCP70480jsMVC.Controllers
         [AllowAnonymous]
         public ActionResult Test()
         {
+            Response.Cookies["LastWatchedMovie"].Value = "100";
+            Response.Cookies["LastWatchedMovie"].Expires = DateTime.Now.AddDays(1);
             return View();
         }
 

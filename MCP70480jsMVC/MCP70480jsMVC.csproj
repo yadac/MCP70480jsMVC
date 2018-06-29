@@ -145,6 +145,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Extensions\ImageGenerator.cs" />
     <Compile Include="Extensions\TestResult.cs" />
+    <Compile Include="Extensions\WatermarkIconWriter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
