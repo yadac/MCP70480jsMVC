@@ -39,9 +39,15 @@ namespace MCP70480jsMVC.Controllers
         }
 
         [ActionName("List")]
-        public ActionResult ListUser(int id)
+        public ActionResult ListUser(int id = 1)
         {
             return View(db.Members);
+        }
+
+        [ChildActionOnly]
+        public ActionResult CurrenTime()
+        {
+            return PartialView("_CurrentTimePartial", DateTime.Now);
         }
 
         [Authorize]
