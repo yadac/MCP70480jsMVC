@@ -33,6 +33,11 @@ namespace MCP70480jsMVC.Controllers
         [AllowAnonymous]
         public ActionResult Test()
         {
+            System.Web.HttpContext context = System.Web.HttpContext.Current;
+            var a = context.Request.Params["size"];
+            var b = context.Request["size"];
+            ViewBag.Param = $"a = {a}, b = {b}";
+
             Response.Cookies["LastWatchedMovie"].Value = "100";
             Response.Cookies["LastWatchedMovie"].Expires = DateTime.Now.AddDays(1);
             return View();
