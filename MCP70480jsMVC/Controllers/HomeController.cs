@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MCP70480jsMVC.Models;
+using System;
 using System.Security.Claims;
 using System.Threading;
 using System.Web.Mvc;
@@ -7,6 +8,8 @@ namespace MCP70480jsMVC.Controllers
 {
     public class HomeController : Controller
     {
+        private BasicContext db = new BasicContext();
+
         public ActionResult Index()
         {
             ViewBag.Message = "Home Action Method.";
@@ -33,6 +36,12 @@ namespace MCP70480jsMVC.Controllers
             Response.Cookies["LastWatchedMovie"].Value = "100";
             Response.Cookies["LastWatchedMovie"].Expires = DateTime.Now.AddDays(1);
             return View();
+        }
+
+        [ActionName("List")]
+        public ActionResult ListUser(int id)
+        {
+            return View(db.Members);
         }
 
         [Authorize]
