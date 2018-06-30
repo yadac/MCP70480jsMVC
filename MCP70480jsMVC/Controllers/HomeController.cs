@@ -44,6 +44,7 @@ namespace MCP70480jsMVC.Controllers
         }
 
         [ActionName("List")]
+        [OutputCache(Duration = 120, VaryByParam = "id")]
         public ActionResult ListUser(int id = 1)
         {
             return View(db.Members);
