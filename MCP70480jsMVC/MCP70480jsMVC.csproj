@@ -211,6 +211,7 @@
     <Content Include="Views\Home\Test.cshtml" />
     <Content Include="Views\Home\List.cshtml" />
     <Content Include="Views\Home\_CurrentTimePartial.cshtml" />
+    <Content Include="Views\Home\_HomePartial.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -10,6 +10,10 @@
         <li>@member.Id = @member.Name</li>
     }
 </ul>
+
+<h3>detail</h3>
+@Html.Partial("_HomePartial", Model.FirstOrDefault(m => m.Id == 1));
+
 <div style="margin-top: 20px; color: blue">
     @Html.Action("CurrenTime", "Home")
 </div>
