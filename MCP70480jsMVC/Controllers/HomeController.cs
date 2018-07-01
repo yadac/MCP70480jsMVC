@@ -76,5 +76,10 @@ namespace MCP70480jsMVC.Controllers
             ViewBag.Message = "Playing Intro Video";
             return View("Index");
         }
+
+        public ActionResult Exception()
+        {
+            throw new Exception("致命的なエラーです。");
+        }
     }
 }
