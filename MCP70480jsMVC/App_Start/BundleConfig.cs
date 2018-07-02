@@ -14,8 +14,12 @@ namespace MCP70480jsMVC
                         "~/Scripts/jquery.validate*"));
 
             // add original js
-            bundles.Add(new ScriptBundle("~/bundles/ysk").Include(
-                        "~/Scripts/ysk-{version}-common.js"));
+            //bundles.Add(new ScriptBundle("~/bundles/ysk").Include(
+            //            "~/Scripts/ysk-{version}-common.js"));
+            var bundle = new Bundle("~/bundles/ysk").IncludeDirectory("~/Scripts", "ysk-{version}-common.js");
+            bundle.Transforms.Add(new CssMinify());
+            BundleTable.Bundles.Add(bundle);
+
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at https://modernizr.com to pick only the tests you need.
