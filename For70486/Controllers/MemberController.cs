@@ -1,4 +1,5 @@
 ﻿using For70486.Models;
+using System.Net;
 using System.Web.Mvc;
 
 namespace For70486.Controllers
@@ -21,6 +22,22 @@ namespace For70486.Controllers
         public ActionResult Edit(int id)
         {
             throw new System.NotImplementedException();
+        }
+
+        public ActionResult Detail(int id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            Member member = db.Members.Find(id);
+            if (member == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(member);
         }
     }
 }
