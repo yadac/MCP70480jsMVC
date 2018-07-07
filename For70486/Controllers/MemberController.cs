@@ -39,5 +39,23 @@ namespace For70486.Controllers
 
             return View(member);
         }
+
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "Id, NAme, Email, Birth, Married, Memo")] Member member)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Members.Add(member);
+                db.SaveChanges();
+                return RedirectToAction("List");
+            }
+            return View(member);
+        }
     }
 }
