@@ -1,4 +1,4 @@
-﻿@model System.Data.Entity.DbSet<For70486.Models.Member>
+﻿@model IEnumerable<For70486.Models.Member>
 
 @{
     ViewBag.Title = "List";
@@ -7,11 +7,11 @@
 <h2>list</h2>
 <table class="table">
     <tr>
-        <th>名前</th>
-        <th>メルアド</th>
-        <th>誕生日</th>
-        <th>既婚</th>
-        <th>備考</th>
+        <th>@Html.DisplayNameFor(model => model.Name)</th>
+        <th>@Html.DisplayNameFor(model => model.Email)</th>
+        <th>@Html.DisplayNameFor(model => model.Birth)</th>
+        <th>@Html.DisplayNameFor(model => model.Married)</th>
+        <th>@Html.DisplayNameFor(model => model.Memo)</th>
     </tr>
     @foreach (var item in Model)
     {
