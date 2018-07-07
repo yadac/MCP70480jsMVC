@@ -17,5 +17,10 @@ namespace For70486.Controllers
         {
             return View(db.Members);
         }
+
+        public ActionResult Edit(int id)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

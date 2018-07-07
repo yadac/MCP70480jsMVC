@@ -21,6 +21,9 @@
         <td>@item.Birth</td>
         <td>@item.Married</td>
         <td>@item.Memo</td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {id = item.Id})
+        </td>
     </tr>
     }
 </table>
