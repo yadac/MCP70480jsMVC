@@ -16,6 +16,8 @@ namespace For70486.Controllers
 
         public ActionResult List()
         {
+            System.Threading.Thread.CurrentThread.CurrentUICulture =
+                new System.Globalization.CultureInfo("ja");
             return View(db.Members);
         }
 
