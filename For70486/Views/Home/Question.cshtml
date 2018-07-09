@@ -1,0 +1,15 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Question";
+}
+
+<h2>Qestion</h2>
+
+@using (Html.BeginForm("Question", "Home"))
+{ 
+    @Html.AntiForgeryToken()
+
+    @Html.TextBox("question")
+    <input type="submit" value="Send" class="btn btn-default"/>
+}

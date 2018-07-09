@@ -202,6 +202,7 @@
     <Content Include="Views\Member\List.cshtml" />
     <Content Include="Views\Member\Detail.cshtml" />
     <Content Include="Views\Member\Create.cshtml" />
+    <Content Include="Views\Home\Question.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

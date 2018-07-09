@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace For70486.Controllers
 {
@@ -25,6 +21,18 @@ namespace For70486.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        public ActionResult Question()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Question(string question)
+        {
+            // viewの値をパラメータで受け取るためには, inputのnameの値とパラメータ名を一致させる
+            return Content(question);
         }
     }
 }
