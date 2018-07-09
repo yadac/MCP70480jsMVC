@@ -6,10 +6,14 @@
 
 <h2>Qestion</h2>
 
+@*usingで囲めばdisposeが自然に、EndFormもいらない*@
 @using (Html.BeginForm("Question", "Home"))
-{ 
+{
     @Html.AntiForgeryToken()
 
-    @Html.TextBox("question")
-    <input type="submit" value="Send" class="btn btn-default"/>
+    //For付きはModelの片付けを利用できる、ForなしはModelから独立したinput属性となる
+    // <p>hello</p>はvalidationエラーになるのがdefault
+    @Html.TextBox("question", "default value", new { maxlength = 100, style = "width:500px" })
+    @Html.TextBox("question1", "default value", new { maxlength = 100, style = "width:500px" })
+    <input type="submit" value="Send" class="btn btn-default" />
 }
