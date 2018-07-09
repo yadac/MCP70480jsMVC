@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using System;
+using System.Web;
 using System.Web.Routing;
 
 namespace For70486.Extensions
@@ -7,6 +8,8 @@ namespace For70486.Extensions
     {
         public void ProcessRequest(HttpContext context)
         {
+            Console.Write(context.Request.UserLanguages[0]);
+
             var p1 = context.Request["size"];
             var p2 = context.Request.Params["size"];
             context.Response.Write($"parameter is {p1}({p2})");
