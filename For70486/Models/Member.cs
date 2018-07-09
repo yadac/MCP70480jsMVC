@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace For70486.Models
 {
@@ -14,7 +15,9 @@ namespace For70486.Models
         public DateTime Birth { get; set; }
         [DisplayName("既婚")]
         public bool Married { get; set; }
-        [DisplayName("備考")]
+        // [DisplayName("備考")]
+        // resourceファイルの設定で表示する
+        [Display(Name = "Memo", ResourceType = typeof(For70486.Resources.MyResource))]
         public string Memo { get; set; }
     }
 }
