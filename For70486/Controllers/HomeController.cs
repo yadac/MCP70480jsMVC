@@ -59,7 +59,7 @@ namespace For70486.Controllers
                 {
                     Value = email,
                     Expires = DateTime.Now.AddMinutes(1),
-                    HttpOnly = true
+                    //HttpOnly = true
                 };
                 //when saving cookies to a user's browser, you should use the response object.
                 //the request object allows you to read existing cookies.
