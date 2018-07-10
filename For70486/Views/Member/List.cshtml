@@ -2,9 +2,10 @@
 
 @{
     ViewBag.Title = "List";
+    ViewBag.test = @HttpContext.GetGlobalResourceObject("MyResource", "Memo");
 }
 
-<h2>list</h2>
+@*<h2>@HttpContext.GetGlobalResourceObject("MyResource", "Memo")</h2>*@
 <div class="display:block">
     @Html.ActionLink("Create", "Create")
 </div>
@@ -18,16 +19,16 @@
     </tr>
     @foreach (var item in Model)
     {
-    <tr>
-        <td>@item.Name</td>
-        <td>@item.Email</td>
-        <td>@item.Birth</td>
-        <td>@item.Married</td>
-        <td>@item.Memo</td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.Id })
-            @Html.ActionLink("Detail", "Detail", new { id = item.Id })
-        </td>
-    </tr>
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Email</td>
+            <td>@item.Birth</td>
+            <td>@item.Married</td>
+            <td>@item.Memo</td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id })
+                @Html.ActionLink("Detail", "Detail", new { id = item.Id })
+            </td>
+        </tr>
     }
 </table>

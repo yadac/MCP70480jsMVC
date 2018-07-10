@@ -1,0 +1,20 @@
+﻿@model dynamic
+
+<h2>email register</h2>
+
+@{
+    //when saving cookies to a user's browser, you should use the response object.
+    //the request object allows you to read existing cookies.
+    if (Request.Cookies["email"] != null)
+    {
+        ViewBag.Email = Request.Cookies["email"].Value;
+    }
+}
+
+@using (Html.BeginForm("RegistEmail", "Home", FormMethod.Post))
+{
+    @Html.Label("email", "メールアドレス")
+    @Html.TextBox("email", (string)ViewBag.Email, new { @class = "form-control" })
+    <input type="submit" value="send" />
+}
+
