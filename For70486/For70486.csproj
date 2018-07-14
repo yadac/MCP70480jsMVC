@@ -149,6 +149,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BeginController.cs" />
+    <Compile Include="Controllers\ExamAdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MemberController.cs" />
     <Compile Include="Extensions\MyCustomHandler.cs" />
@@ -220,6 +221,7 @@
     <Content Include="Views\Member\Create.cshtml" />
     <Content Include="Views\Home\Question.cshtml" />
     <Content Include="Views\Home\RegistEmail.cshtml" />
+    <Content Include="Views\ExamAdmin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
