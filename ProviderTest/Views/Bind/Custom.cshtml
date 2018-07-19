@@ -1,0 +1,17 @@
+﻿@model dynamic
+
+<h2>Member Input</h2>
+
+@using (Html.BeginForm("Custom", "Bind", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    @Html.Label("Name:")
+    @Html.TextBox("name", "")
+    <br />
+    @Html.Label("Age:")
+    @Html.TextBox("age", "", new{size = 2})
+    <div style="margin-top:10px"><input type="submit" value="送信" /></div>
+    
+}
+

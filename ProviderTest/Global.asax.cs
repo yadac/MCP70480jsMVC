@@ -1,10 +1,12 @@
-﻿using MCP70480jsMVC.Models;
-using System.Data.Entity;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 
-namespace MCP70480jsMVC
+namespace ProviderTest
 {
     public class MvcApplication : System.Web.HttpApplication
     {
@@ -14,14 +16,6 @@ namespace MCP70480jsMVC
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-
-            Database.SetInitializer<BasicContext>(new BasicContextInitializer());
-
-            // for each Device type
-            //DisplayModeProvider.Instance.Modes.Insert(0, new DefaultDisplayMode("iPhone")
-            //{
-            //    ContextCondition = (c => c.Request.UserAgent.IndexOf("iPhone") >= 0)
-            //});
         }
     }
 }

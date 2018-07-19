@@ -1,0 +1,31 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ErrorSpare</title>
+</head>
+<body>
+    <hgroup>
+        <h1>ErrorSpare.</h1>
+        <h2>An error occurred while processing your request.</h2>
+    </hgroup>
+
+    <table class="table">
+        <tr>
+            <th>発生元</th>
+            <td>@Model.ControllerName / @Model.ActionName</td>
+        </tr>
+        <tr>
+            <th>例外</th>
+            <td>@Model.Exception.GetType().Name</td>
+        </tr>
+        <tr>
+            <th>メッセージ</th>
+            <td>@Model.Exception.Message</td>
+        </tr>
+    </table>
+
+</body>
+</html>

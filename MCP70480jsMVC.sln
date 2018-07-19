@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "For70486.Tests", "For70486.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRChat", "SignalRChat\SignalRChat.csproj", "{CA16064A-9284-43E4-B0DA-F91E4D2A0531}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProviderTest", "ProviderTest\ProviderTest.csproj", "{E669A8A4-B233-44A3-9239-9F929469BDA6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{CA16064A-9284-43E4-B0DA-F91E4D2A0531}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA16064A-9284-43E4-B0DA-F91E4D2A0531}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA16064A-9284-43E4-B0DA-F91E4D2A0531}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E669A8A4-B233-44A3-9239-9F929469BDA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E669A8A4-B233-44A3-9239-9F929469BDA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E669A8A4-B233-44A3-9239-9F929469BDA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E669A8A4-B233-44A3-9239-9F929469BDA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
